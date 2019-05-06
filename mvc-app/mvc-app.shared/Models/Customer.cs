@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace mvc_app.logic.Models
+namespace mvc_app.shared.Models
 {
     public class Customer : ModelBase
     {

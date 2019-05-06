@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
@@ -7,11 +7,11 @@
 
   <ItemGroup>
     <ProjectReference Include="..\mvc-app.data\mvc-app.data.csproj" />
+    <ProjectReference Include="..\mvc-app.shared\mvc-app.shared.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Handlers\Item\" />
-    <Folder Include="Handlers\Customer\" />
     <Folder Include="Handlers\Order\" />
   </ItemGroup>
 

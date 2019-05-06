@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace mvc_app.logic.Models
+namespace mvc_app.shared.Models
 {
     public class Order : ModelBase
     {

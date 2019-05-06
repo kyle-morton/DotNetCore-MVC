@@ -1,4 +1,4 @@
-﻿namespace mvc_app.logic.Models
+﻿namespace mvc_app.shared.Models
 {
     public class Item : ModelBase
     {
