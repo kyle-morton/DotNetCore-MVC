@@ -1,0 +1,10 @@
+{
+  "version": "1.0.0",
+  "name": "asp.net",
+  "private": true,
+  "devDependencies": {},
+  "dependencies": {
+    "lodash": "^4.17.11",
+    "vue": "^2.6.10"
+  }
+}
