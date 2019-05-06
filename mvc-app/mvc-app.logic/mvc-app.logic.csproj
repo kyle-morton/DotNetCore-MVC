@@ -9,4 +9,10 @@
     <ProjectReference Include="..\mvc-app.data\mvc-app.data.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Handlers\Item\" />
+    <Folder Include="Handlers\Customer\" />
+    <Folder Include="Handlers\Order\" />
+  </ItemGroup>
+
 </Project>
