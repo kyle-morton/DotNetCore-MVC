@@ -16,6 +16,7 @@
 
 
   <ItemGroup>
+    <ProjectReference Include="..\mvc-app.data\mvc-app.data.csproj" />
     <ProjectReference Include="..\mvc-app.logic\mvc-app.logic.csproj" />
     <ProjectReference Include="..\mvc-app.shared\mvc-app.shared.csproj" />
   </ItemGroup>

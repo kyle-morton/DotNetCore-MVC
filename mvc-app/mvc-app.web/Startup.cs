@@ -9,6 +9,8 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using mvc_app.data.Repositories;
+using mvc_app.logic.Handlers.Customer;
 
 namespace mvc_app.web
 {
@@ -31,6 +33,8 @@ namespace mvc_app.web
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
+            services.AddTransient<ICustomerRepository, CustomerRepository>();
+            services.AddTransient<IGetCustomersHandler, GetCustomersHandler>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }

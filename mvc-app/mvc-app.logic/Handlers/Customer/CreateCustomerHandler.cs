@@ -4,7 +4,13 @@ using System.Text;
 
 namespace mvc_app.logic.Handlers.Customer
 {
-    class CreateCustomerHandler
+    public class CreateCustomerHandler
     {
+
+        public CreateCustomerHandler()
+        {
+
+        }
+
     }
 }

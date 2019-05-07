@@ -1,30 +1,33 @@
-﻿using System;
+﻿using mvc_app.data.DataStore;
+using mvc_app.shared.Models;
+using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Linq;
 
 namespace mvc_app.data.Repositories
 {
     public interface ICustomerRepository
     {
-        IList<Object> GetCustomers();
-        Object GetCustomerById(int id);
-        void CreateCustomer(Object customer);
+        IList<Customer> GetCustomers();
+        Customer GetCustomerById(int id);
+        void CreateCustomer(Customer customer);
     }
     public class CustomerRepository : ICustomerRepository
     {
-        public void CreateCustomer(object customer)
+
+        public void CreateCustomer(Customer customer)
         {
-            throw new NotImplementedException();
+            CustomersData.Customers.Add(customer);
         }
 
-        public object GetCustomerById(int id)
+        public Customer GetCustomerById(int id)
         {
-            throw new NotImplementedException();
+            return CustomersData.Customers.SingleOrDefault(x => x.ID == id);
         }
 
-        public IList<object> GetCustomers()
+        public IList<Customer> GetCustomers()
         {
-            throw new NotImplementedException();
+            return CustomersData.Customers;
         }
     }
 }

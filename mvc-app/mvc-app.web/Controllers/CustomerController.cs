@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using mvc_app.logic.Handlers.Customer;
 using mvc_app.shared.Models;
 
 namespace mvc_app.web.Controllers
@@ -11,14 +12,17 @@ namespace mvc_app.web.Controllers
     public class CustomerController : Controller
     {
 
-        public CustomerController()
+        private IGetCustomersHandler _handler;
+
+        public CustomerController(IGetCustomersHandler handler)
         {
+            _handler = handler;
         }
 
         // GET: Customer
         public ActionResult Index()
         {
-            return View(new List<Customer>());
+            return View(_handler.Handle(new GetCustomersRequest()).Customers);
         }
 
         // GET: Customer/Details/5
